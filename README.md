@@ -93,7 +93,7 @@ O código foi refatorado para garantir melhor organização e manutenção, util
 
 Veja abaixo como está a interface da aplicação:
 
-![Print da Aplicação](lojagopher1.png)  
+![Print da Aplicação](lojagopher.png)  
 ![Print da Aplicação](lojagopher2.png)  
 ![Print da Aplicação](lojagopher3.png)  
 ![Print da Aplicação](lojagopher4.png)  
