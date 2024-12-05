@@ -82,3 +82,41 @@ func DeletaProduto(id string) {
 	defer db.Close()
 }
 
+// FUNÇÃO PARA EDITAR PRODUTO
+func EditaProduto(id string) Produto {
+	db := db.ConectaComBancoDeDados()
+	produtoDoBanco, err := db.Query("SELECT * FROM produtos WHERE id =$1", id)
+	if err != nil {
+		panic(err.Error())
+	}
+	produtoParaAtualizar := Produto{}
+	for produtoDoBanco.Next() {
+		var id, quantidade int
+		var nome, descricao string
+		var preco float64
+
+		err = produtoDoBanco.Scan(&id, &nome, &descricao, &preco, &quantidade)
+		if err != nil {
+			panic(err.Error())
+		}
+		produtoParaAtualizar.Id = id
+		produtoParaAtualizar.Nome = nome
+		produtoParaAtualizar.Descricao = descricao
+		produtoParaAtualizar.Preco = preco
+		produtoParaAtualizar.Quantidade = quantidade
+
+	}
+	defer db.Close()
+	return produtoParaAtualizar
+}
+
+// FUNÇÃO PARA ATUALIZAR PRODUTO
+func AtualizaProduto(id string, nome, descricao string, preco float64, quantidade int) {
+	db := db.ConectaComBancoDeDados()
+	atualizaProduto, err := db.Prepare("UPDATE produtos SET nome=$1, descricao=$2, preco=$3, quantidade=$4 WHERE id=$5")
+	if err != nil {
+		panic(err.Error())
+	}
+	atualizaProduto.Exec(nome, descricao, preco, quantidade, id)
+	defer db.Close()
+}
