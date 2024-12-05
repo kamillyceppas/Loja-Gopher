@@ -85,7 +85,7 @@ func DeletaProduto(id string) {
 // FUNÇÃO PARA EDITAR PRODUTO
 func EditaProduto(id string) Produto {
 	db := db.ConectaComBancoDeDados()
-	produtoDoBanco, err := db.Query("SELECT * FROM produtos ORDER BY id ASC WHERE id =$1", id)
+	produtoDoBanco, err := db.Query("SELECT * FROM produtos WHERE id =$1 ORDER BY id ASC", id)
 	if err != nil {
 		panic(err.Error())
 	}
