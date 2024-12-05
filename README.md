@@ -1,4 +1,4 @@
-# Loja Gopher 🛍️
+# Loja Gopher <img src="https://raw.githubusercontent.com/rfyiamcool/golang_logo/master/gif/stop.gif" width="35" />
 
 ## Descrição 📋
 
