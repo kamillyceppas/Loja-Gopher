@@ -111,7 +111,7 @@ func EditaProduto(id string) Produto {
 }
 
 // FUNÇÃO PARA ATUALIZAR PRODUTO
-func AtualizaProduto(id string, nome, descricao string, preco float64, quantidade int) {
+func AtualizaProduto(id int, nome, descricao string, preco float64, quantidade int) {
 	db := db.ConectaComBancoDeDados()
 	atualizaProduto, err := db.Prepare("UPDATE produtos SET nome=$1, descricao=$2, preco=$3, quantidade=$4 WHERE id=$5")
 	if err != nil {
