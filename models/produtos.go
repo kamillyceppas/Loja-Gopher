@@ -83,7 +83,7 @@ func DeletaProduto(id string) {
 }
 
 // FUNÇÃO PARA EDITAR PRODUTO
-func EditaProduto(id string) []Produto {
+func EditaProduto(id string) Produto {
 	db := db.ConectaComBancoDeDados()
 	produtoDoBanco, err := db.Query("SELECT * FROM produtos ORDER BY id ASC WHERE id =$1", id)
 	if err != nil {
