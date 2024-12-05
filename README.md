@@ -2,7 +2,7 @@
 
 ## Descrição 📋
 
-Este é um projeto de aplicação web desenvolvido como parte do curso "Go: Crie uma Aplicação Web" da Alura. O objetivo é criar uma loja online simples, onde é possível adicionar novos produtos ao banco de dados e visualizar os produtos cadastrados.
+Este é um projeto de aplicação web desenvolvido como parte do curso 'Go: Crie uma Aplicação Web' da Alura. O objetivo é criar uma loja online simples, onde é possível adicionar novos produtos ao banco de dados, visualizar os produtos cadastrados, além de permitir a alteração, atualização e exclusão dos produtos.
 
 ## Tecnologias Utilizadas 🛠️
 
