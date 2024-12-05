@@ -1,4 +1,4 @@
-# Loja Gopher <img src="https://raw.githubusercontent.com/rfyiamcool/golang_logo/master/png/golang_87.png" width="95" />
+# Loja Gopher <img src="https://raw.githubusercontent.com/rfyiamcool/golang_logo/master/png/golang_87.png" width="75" />
 
 ## Descrição 📋
 
